@@ -34,7 +34,7 @@
 &kp TAB        &kp Q      &kp W     &kp E    &kp R          &kp T                                       &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT
 &kp ESC        &kp A      &kp S     &kp D    &kp F          &kp G                                       &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z      &kp X     &kp C    &kp V          &kp B         &trans             &trans     &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                          &trans    &kp LALT &lt 2 LGUI     &mt LCTRL RET &lt 1 BSPC         &kp SPACE  &kp DEL  &kp RALT &kp &trans &trans
+                          &trans    &kp LALT &lt 2 LGUI     &mt LCTRL RET &lt 1 BSPC         &kp SPACE  &kp DEL  &kp RALT &trans     &trans 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -61,13 +61,13 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // | USB/BT | EP_ON | EP_OFF | EP_TOG |      |      |                   |      |       |       |      |       |       |
-// |  GRAVE |       |  HOME  |  ^     | END  | PGUP |                   |      |       |       |      |       |       |
+// |  GRAVE | RETUR |  HOME  |  ^     | END  | PGUP |                   |      |       |       |      |       |       |
 // |        | DEL   |   <-   |   v    |  ->  | PGDN |                   |      |       |       |      |       |       |
 // |        | SPACE |        |        |      |      |        |  |       |      |       |       |      |       |       |
 //                  |        |        |      |      |        |  |       |      |       |       |      |
             bindings = <
 &out OUT_TOG &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG  &trans    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
-&GRAVE       &trans           &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
+&GRAVE       &kp RET          &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans       &kp DEL          &kp LEFT          &kp DOWN           &kp RIGHT &kp PG_DN                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans       &kp SPACE        &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
                               &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans
