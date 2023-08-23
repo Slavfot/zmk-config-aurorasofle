@@ -49,9 +49,9 @@
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                    &trans    &trans    &trans    &trans    &trans    &trans
-&kp RBKT   KP_DIVIDE        &kp N7            &kp N8            &kp N9       &kp KP_MULTIPLY                 &trans    &trans    &trans    &trans    &trans    &trans
-&kp NUHS   KP_MINUS         &kp N4            &kp N5            &kp N6       &kp N0                          &trans    &trans    &trans    &trans    &trans    &trans
-&trans     KP_PLUS          &kp N1            &kp N2            &kp N3       &kp KP_DOT   &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&kp RBKT   &kp KP_DIVIDE    &kp N7            &kp N8            &kp N9       &kp KP_MULTIPLY                 &trans    &trans    &trans    &trans    &trans    &trans
+&kp NUHS   &kp KP_MINUS     &kp N4            &kp N5            &kp N6       &kp N0                          &trans    &trans    &trans    &trans    &trans    &trans
+&trans     &kp KP_PLUS      &kp N1            &kp N2            &kp N3       &kp KP_DOT   &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
                             &trans            &trans            &trans       &trans       &trans   &trans    &trans    &trans    &trans    &trans
             >;
 
@@ -67,7 +67,7 @@
 //                  |        |        |      |      |        |  |       |      |       |       |      |
             bindings = <
 &out OUT_TOG &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG  &trans    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
-&GRAVE       &kp RET          &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
+&kp GRAVE    &kp RET          &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans       &kp DEL          &kp LEFT          &kp DOWN           &kp RIGHT &kp PG_DN                       &trans      &trans    &trans    &trans   &trans    &trans
 &trans       &kp SPACE        &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
                               &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans
