@@ -44,14 +44,14 @@
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // | RBKT  |  /  |  7  |  8   |  9   |  *   |                   |      |       |       |      |       |       |
-// | NUHS  |  -  |  4  |  5   |  6   |  0   |                   |      |       |       |      |       |       |
-// |       |  +  |  1  |  2   |  3   |  .   |        |  |       |      |       |       |      |       |       |
+// | NUHS  |  -  |  4  |  5   |  6   |  +   |                   |      |       |       |      |       |       |
+// |       |  0  |  1  |  2   |  3   |  ,   |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                    &trans    &trans    &trans    &trans    &trans    &trans
 &kp RBKT   &kp KP_DIVIDE    &kp N7            &kp N8            &kp N9       &kp KP_MULTIPLY                 &trans    &trans    &trans    &trans    &trans    &trans
-&kp NUHS   &kp KP_MINUS     &kp N4            &kp N5            &kp N6       &kp N0                          &trans    &trans    &trans    &trans    &trans    &trans
-&trans     &kp KP_PLUS      &kp N1            &kp N2            &kp N3       &kp KP_DOT   &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
+&kp NUHS   &kp KP_MINUS     &kp N4            &kp N5            &kp N6       &kp KP_PLUS                     &trans    &trans    &trans    &trans    &trans    &trans
+&trans     &kp N0           &kp N1            &kp N2            &kp N3       &kp COMMA    &trans   &trans    &trans    &trans    &trans    &trans    &trans    &trans
                             &trans            &trans            &trans       &trans       &trans   &trans    &trans    &trans    &trans    &trans
             >;
 
@@ -60,16 +60,16 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | USB/BT | EP_ON | EP_OFF | EP_TOG |      |      |                   |      |       |       |      |       |       |
-// |  GRAVE | RETUR |  HOME  |  ^     | END  | PGUP |                   |      |       |       |      |       |       |
-// |        | DEL   |   <-   |   v    |  ->  | PGDN |                   |      |       |       |      |       |       |
-// |        | SPACE |        |        |      |      |        |  |       |      |       |       |      |       |       |
+// | USB/BT | EP_ON | EP_OFF | EP_TOG |      | NUML |                   |      |       |       |      |       |       |
+// |  GRAVE |       |  HOME  |   ^    | END  | PGUP |                   |      |       |       |      |       |       |
+// |        |   -   |   <-   |   v    |  ->  | PGDN |                   |      |       |       |      |       |       |
+// |        |  LALT |  DEL   | RETUR  | SPACE| LALT |        |  |       |      |       |       |      |       |       |
 //                  |        |        |      |      |        |  |       |      |       |       |      |
             bindings = <
-&out OUT_TOG &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG  &trans    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE    &kp RET          &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans       &kp DEL          &kp LEFT          &kp DOWN           &kp RIGHT &kp PG_DN                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans       &kp SPACE        &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
+&out OUT_TOG &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG  &trans    &kp KP_NLCK                     &trans      &trans    &trans    &trans   &trans    &trans
+&kp GRAVE    &trans           &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &kp KP_MINUS     &kp LEFT          &kp DOWN           &kp RIGHT &kp PG_DN                       &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &kp LALT         &kp DEL           &kp RET            &kp LALT  &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
                               &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans
             >;
 
@@ -78,16 +78,16 @@
 
         third_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |        |       |        |        |      |      |                   |      |       |       |      |       |       |
-// |        | RETUR |  HOME  |  ^     | END  | PGUP |                   |      |       |       |      |       |       |
-// |        | DEL   |   <-   |   v    |  ->  | PGDN |                   |      |       |       |      |       |       |
-// |        | SPACE |        |        |      |      |        |  |       |      |       |       |      |       |       |
+// |        |       |   F10  |   F11  |  F12 |      |                   |      |       |       |      |       |       |
+// |        |       |   F7   |   F8   |  F9  |      |                   |      |       |       |      |       |       |
+// |        |       |   F4   |   F5   |  F6  |      |                   |      |       |       |      |       |       |
+// |        |       |   F1   |   F2   |  F3  |      |        |  |       |      |       |       |      |       |       |
 //                  |        |        |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans       &trans           &trans            &trans             &trans    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
-&trans       &kp RET          &kp HOME          &kp UP             &kp END   &kp PG_UP                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans       &kp DEL          &kp LEFT          &kp DOWN           &kp RIGHT &kp PG_DN                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans       &kp SPACE        &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &trans           &kp f10           &kp f11            &kp f12   &trans                          &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &trans           &kp f7            &kp f8             &kp f9    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &trans           &kp f4            &kp f5             &kp f6    &trans                          &trans      &trans    &trans    &trans   &trans    &trans
+&trans       &trans           &kp f1            &kp f2             &kp f3    &trans    &trans        &trans  &trans      &trans    &trans    &trans   &trans    &trans
                               &trans            &trans             &trans    &trans    &trans        &trans  &trans      &trans    &trans    &trans
             >;
 
